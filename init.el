@@ -7,12 +7,7 @@
 
 (when (>= emacs-major-version 24)
   (require 'package)
-<<<<<<< HEAD
-  (add-to-list 'package-archives
-               '("melpa" . "http://melpa.milkbox.net/packages/") t)
-=======
   (setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")))
->>>>>>> try
   (package-initialize)
   )
 
