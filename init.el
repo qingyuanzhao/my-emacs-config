@@ -19,7 +19,7 @@
 
 (defvar my-packages '(ido-ubiquitous ess flymake flymake-ruby flymake-shell
                       org-magit auctex magit python yasnippet color-theme
-                      zenburn-theme anti-zenburn-theme writegood-mode maxframe)
+                      zenburn-theme anti-zenburn-theme writegood-mode maxframe python-mode ipython)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -45,3 +45,16 @@
 
 ;; Default font
 (set-default-font "monaco-16")
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(csv-separators (quote (";" "	"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

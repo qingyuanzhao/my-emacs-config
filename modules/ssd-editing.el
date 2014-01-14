@@ -11,7 +11,9 @@
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 ;; programming hooks
-(add-hook 'prog-mode-hook 'linum-mode)
+(require 'linum)
+(global-linum-mode 1)
+
 
 ;; uniq buffer names
 (require 'uniquify)
@@ -30,6 +32,7 @@
 ;;(electric-indent-mode t)
 ;;(electric-layout-mode t)
 
+
 ;; Autocompletion/snippets
 (global-set-key (kbd "M-'") 'hippie-expand)
 (require 'yasnippet)
@@ -42,10 +45,11 @@
 
 ;; WriteGood-mode
 (require 'writegood-mode)
-(add-hook 'text-mode-hook 'writegood-turn-on)
+;; (add-hook 'text-mode-hook 'writegood-turn-on)
 
 
 ;; csv-mode
+(require 'csv-mode)
 (add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
 (autoload 'csv-mode "csv-mode"
   "Major mode for editing comma-separated value files." t)
