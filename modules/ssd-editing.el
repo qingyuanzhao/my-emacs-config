@@ -53,3 +53,10 @@
 (add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
 (autoload 'csv-mode "csv-mode"
   "Major mode for editing comma-separated value files." t)
+
+
+
+(require 'auto-complete-config)
+(ac-config-default)
+(setq ac-quick-help-prefer-pos-tip t)
+(require 'pos-tip)
