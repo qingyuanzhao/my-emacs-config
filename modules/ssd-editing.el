@@ -35,9 +35,6 @@
 
 ;; Autocompletion/snippets
 (global-set-key (kbd "M-'") 'hippie-expand)
-(require 'yasnippet)
-(yas--initialize)
-(yas/load-directory (concat emacs-dir "snippets"))
 
 ;; Integrate hippie-expand with ya-snippet
 (add-to-list 'hippie-expand-try-functions-list
@@ -56,7 +53,7 @@
 
 
 
-(require 'auto-complete-config)
-(ac-config-default)
-(setq ac-quick-help-prefer-pos-tip t)
-(require 'pos-tip)
+;; (require 'auto-complete-config)
+;; (ac-config-default)
+;; (setq ac-quick-help-prefer-pos-tip t)
+;; (require 'pos-tip)
