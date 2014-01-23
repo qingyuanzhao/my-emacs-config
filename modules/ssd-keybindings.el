@@ -3,6 +3,9 @@
 (setq mac-command-modifier 'meta mac-option-modifier 'ctrl)
 (global-set-key (kbd "C-z") 'undo)
 
+;; Set yasnippet expansion key to C-o
+(global-set-key (kbd "C-o") 'yas-expand-from-trigger-key)
+
 
 ;; Fontsize
 (define-key global-map (kbd "C-+") 'text-scale-increase)

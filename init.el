@@ -7,9 +7,10 @@
 
 (when (>= emacs-major-version 24)
   (require 'package)
-  (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                           ("marmalade" . "http://marmalade-repo.org/packages/")
-                           ("melpa" . "http://melpa.milkbox.net/packages/")))
+  (setq package-archives '(("marmalade" . "http://marmalade-repo.org/packages/")
+                           ;; ("gnu" . "http://elpa.gnu.org/packages/")
+                           ("melpa" . "http://melpa.milkbox.net/packages/")
+                           ))
   (package-initialize)
   )
 
@@ -19,7 +20,7 @@
 
 (defvar my-packages '(ido-ubiquitous ess flymake flymake-ruby flymake-shell
                       org-magit auctex magit python yasnippet color-theme
-                      zenburn-theme anti-zenburn-theme writegood-mode maxframe python-mode ipython pos-tip auto-complete auctex-latexmk r-autoyas)
+                      zenburn-theme anti-zenburn-theme writegood-mode maxframe python-mode ipython pos-tip auto-complete auctex-latexmk r-autoyas browse-kill-ring)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)

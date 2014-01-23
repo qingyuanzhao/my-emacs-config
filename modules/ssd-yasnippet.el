@@ -3,6 +3,9 @@
 (yas/load-directory (concat emacs-dir "snippets"))
 (setq yas/triggers-in-field t)
 
+
+
+
 ;; r-autoyas
 (require 'r-autoyas)
 (add-hook 'ess-mode-hook 'r-autoyas-ess-activate)

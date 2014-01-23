@@ -52,6 +52,11 @@
   "Major mode for editing comma-separated value files." t)
 
 
+;; kill-ring
+(setq kill-ring-max 200)
+(when (require 'browse-kill-ring nil 'noerror)
+  (browse-kill-ring-default-keybindings))
+
 
 ;; (require 'auto-complete-config)
 ;; (ac-config-default)
