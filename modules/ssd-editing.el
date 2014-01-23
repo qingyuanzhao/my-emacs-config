@@ -62,3 +62,10 @@
 ;; (ac-config-default)
 ;; (setq ac-quick-help-prefer-pos-tip t)
 ;; (require 'pos-tip)
+
+
+;; rebox2 setting
+(setq rebox-style-loop '(20 33))
+(require 'rebox2)
+(global-set-key [(meta q)] 'rebox-dwim)
+(global-set-key [(shift meta q)] 'rebox-cycle)

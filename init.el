@@ -20,7 +20,7 @@
 
 (defvar my-packages '(ido-ubiquitous ess flymake flymake-ruby flymake-shell
                       org-magit auctex magit python yasnippet color-theme
-                      zenburn-theme anti-zenburn-theme writegood-mode maxframe python-mode ipython pos-tip auto-complete auctex-latexmk r-autoyas browse-kill-ring)
+                      zenburn-theme anti-zenburn-theme writegood-mode maxframe python-mode ipython pos-tip auto-complete auctex-latexmk r-autoyas browse-kill-ring rebox2)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)

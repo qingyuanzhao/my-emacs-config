@@ -1,4 +1,5 @@
-;; python
+;;python
+
 (require 'python-mode)
 
 
