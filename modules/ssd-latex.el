@@ -45,7 +45,6 @@
             (setq TeX-electric-escape t)
             (setq TeX-source-correlate-method 'synctex)
             (TeX-source-correlate-mode 1)
-            (server-start)
 ))
 
 
