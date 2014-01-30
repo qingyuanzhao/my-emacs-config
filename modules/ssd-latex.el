@@ -24,6 +24,7 @@
             (setq TeX-auto-save t)
             (setq TeX-parse-self t)
             (setq TeX-save-query nil)
+            (setq-default TeX-master nil)
             (setq TeX-source-correlate-method 'synctex)
             (TeX-source-correlate-mode 1)
             (add-to-list 'TeX-command-list '("XeLaTeX" "xelatex -shell-escape %(mode) %t" TeX-run-TeX nil  (latex-mode) ))
