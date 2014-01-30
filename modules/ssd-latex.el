@@ -4,6 +4,7 @@
 (load "preview.el" nil t t)
 
 
+;; In skim set preference to be /usr/local/bin/emacsclient -f ~/.emacs.d/server/server
 ;;OS X Madness
 (if (eq system-type 'darwin)
     (progn
