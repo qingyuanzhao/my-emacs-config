@@ -24,3 +24,5 @@
 
 
 (global-set-key (kbd "<f8> r") '(lambda () (interactive) (find-file-read-only "~/Dropbox/org/notes/reference.org")))
+(global-set-key (kbd "<f8> n") 'org-narrow-to-subtree)
+(global-set-key (kbd "<f8> w") 'widen)
