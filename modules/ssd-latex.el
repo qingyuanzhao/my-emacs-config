@@ -23,13 +23,14 @@
             (setq TeX-auto-save t)
             (setq TeX-parse-self t)
             (setq TeX-save-query nil)
+            (setq TeX-source-correlate-method 'synctex)
+            (TeX-source-correlate-mode 1)
             (add-to-list 'TeX-command-list '("XeLaTeX" "xelatex -shell-escape %(mode) %t" TeX-run-TeX nil  (latex-mode) ))
             (add-to-list 'TeX-command-list '("pdfLaTeX" "pdflatex -shell-escape %(mode) %t" TeX-run-TeX nil  (latex-mode) ))
             (add-to-list 'TeX-command-list '("latexmk" "latexmk -pdf %s" TeX-run-TeX nil t
       :help "Run latexmk on file"))
             (add-to-list 'TeX-command-list '("latexmkpvc" "latexmk -pvc -pdf %s" TeX-run-TeX nil t
       :help "Run latexmk on file"))
-            ;; (LaTeX-command "latex -synctex=1")
             (setq TeX-command-default "latexmkpvc")
             (setq TeX-auto-untabify t     ; remove all tabs before saving
                   TeX-show-compilation t) ; display compilation windows
@@ -43,9 +44,6 @@
             (setq TeX-DVI-via-PDFTeX t)
             (setq LaTeX-math-abbrev-prefix '";")  ;Set the math mode prefix to
             (setq TeX-electric-escape t)
-            (setq TeX-source-correlate-method 'synctex)
-            (TeX-source-correlate-mode 1)
-            (server-start)
 ))
 
 

@@ -41,11 +41,12 @@
 
 ;; Require packages in modules/
 (mapc 'load (directory-files module-dir nil "^[^#].*el$"))
-(server-start)
 
 
 ;; Default font
 (set-default-font "monaco-16")
+
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -59,3 +60,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(setq server-use-tcp t)
+(server-start)
