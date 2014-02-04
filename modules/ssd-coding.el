@@ -14,7 +14,9 @@
             (abbrev-mode 1)
             (auto-fill-mode 1)
             (if (eq window-system 'x)
-                (font-lock-mode 1))))
+                (font-lock-mode 1))
+            (setq comment-start "%")
+))
 
 
 ;; ESS-mode

@@ -108,5 +108,5 @@
 
 
 ;; XeLaTeX
-(setq TeX-open-quote "“")
-(setq TeX-close-quote "”")
+;; (setq TeX-open-quote "“")
+;; (setq TeX-close-quote "”")
