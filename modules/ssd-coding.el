@@ -1,7 +1,6 @@
 ;;python
-
 (require 'python-mode)
-
+(setq-default py-shell-name "ipython")
 
 ;; octave
 ;; autolad octave mode for *.m-files
