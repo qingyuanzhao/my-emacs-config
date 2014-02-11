@@ -2,7 +2,8 @@
 ;; (add-to-list 'custom-theme-load-path (concat emacs-dir "themes/"))
 ;; (load-theme 'ssd-colors t)
 ;; (load-theme 'anti-zenburn t)
-(load-theme 'wombat t)
+;;(load-theme 'solarized-light t)
+(load-theme 'solarized-dark t)
 
 ;; other ui
 ;; move into the theme eventually

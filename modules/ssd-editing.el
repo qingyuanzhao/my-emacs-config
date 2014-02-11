@@ -28,9 +28,14 @@
 (global-set-key (kbd "C-.") 'repeat)
 
 ;; electric modes
-(electric-pair-mode t)
+;;(electric-pair-mode t)
 ;;(electric-indent-mode t)
 ;;(electric-layout-mode t)
+
+;; Autopair mode
+(require 'autopair)
+(autopair-global-mode) ;; to enable in all buffers
+
 
 
 ;; Autocompletion/snippets
@@ -53,9 +58,11 @@
 
 
 ;; kill-ring
-(setq kill-ring-max 200)
-(when (require 'browse-kill-ring nil 'noerror)
+;;(setq kill-ring-max 200)
+(require 'browse-kill-ring)
+  (when (require 'browse-kill-ring nil 'noerror)
   (browse-kill-ring-default-keybindings))
+
 
 
 ;; (require 'auto-complete-config)
