@@ -39,6 +39,12 @@
 
 
 ;; Matlab-mode
+(load-library "matlab-load")
+(setq matlab-shell-command "/Applications/MATLAB_R2013a_Student.app/bin/matlab")
+(setq matlab-shell-command-switches '("-nodesktop -nosplash"))
+
+
+
 (autoload 'matlab-mode "matlab" "Enter Matlab mode." t)
 (setq auto-mode-alist (cons '("\\.m\\'" . matlab-mode) auto-mode-alist))
 (autoload 'matlab-shell "matlab" "Interactive Matlab mode." t)

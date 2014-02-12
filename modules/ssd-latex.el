@@ -46,7 +46,7 @@
             (linum-mode 1)
             (setq TeX-DVI-via-PDFTeX t)
             (setq LaTeX-math-abbrev-prefix '";")  ;Set the math mode prefix to
-            (setq TeX-electric-escape t)
+            (setq TeX-electric-escape nil)
 ))
 
 
@@ -106,6 +106,16 @@
 (setq reftex-cite-cleanup-optional-args t)
 
 
+(setq TeX-macro-global '("/usr/local/texlive/2013/texmf-dist/tex/"))
+(setq TeX-macro-private '("/Users/hera/.emacs.d/elpa/auctex-11.87.2/latex/"
+			 "~/Users/hera/.emacs.d/auctex/"))
+(setq TeX-auto-private '("/Users/hera/.emacs.d/auctex/auto"))
+
+;; cdlatex
+(autoload 'cdlatex-mode "cdlatex" "CDLaTeX Mode" t)
+(autoload 'turn-on-cdlatex "cdlatex" "CDLaTeX Mode" nil)
+(add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)   ; with AUCTeX LaTeX mode
+(add-hook 'latex-mode-hook 'turn-on-cdlatex)   ; with Emacs latex mode
 
 ;; XeLaTeX
 ;; (setq TeX-open-quote "“")

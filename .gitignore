@@ -11,3 +11,5 @@ url
 bookmarks
 eshell
 /server/server
+/auctex/auto/*.el
+/auctex/math.tex
