@@ -76,4 +76,6 @@
 (global-set-key (kbd "<f12>") 'gud-cont)
 (global-set-key (kbd "<f11>") 'gud-step);; equiv matlab step in
 (global-set-key (kbd "<f10>") 'gud-next) ;; equiv matlab step 1
-(global-set-key (kbd "<f9>") 'gud-finish) ;; equiv matlab step out
+(global-set-key (kbd "<f9> f") 'gud-finish) ;; equiv matlab step out
+(global-set-key (kbd "<f9> p") 'gud-print) ;; equiv matlab dbtype
+(global-set-key (kbd "<f9> c") 'gud-remove) ;; equiv matlab dbclear

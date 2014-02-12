@@ -20,6 +20,7 @@
 
 (add-hook 'LaTeX-mode-hook
           (lambda ()
+            (setq flyspell-mode nil)
             (setq TeX-PDF-mode t)       ; PDF mode enable, not plain
             (setq TeX-auto-save t)
             (setq TeX-parse-self t)
