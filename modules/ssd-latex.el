@@ -113,6 +113,7 @@
 (setq TeX-auto-private '("/Users/hera/.emacs.d/auctex/auto"))
 
 ;; cdlatex
+;; Need to replace last-command-char to last-command-event in cdlatex.el!!
 (autoload 'cdlatex-mode "cdlatex" "CDLaTeX Mode" t)
 (autoload 'turn-on-cdlatex "cdlatex" "CDLaTeX Mode" nil)
 (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)   ; with AUCTeX LaTeX mode
