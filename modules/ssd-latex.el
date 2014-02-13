@@ -54,6 +54,7 @@
                          '(115 "\\mathbb" nil t nil nil))
             (setq cdlatex-math-symbol-prefix 168)
             (cdlatex-reset-mode)
+            (setq cdlatex-paired-parens "$")
 ))
 
 
