@@ -48,6 +48,12 @@
             (setq TeX-DVI-via-PDFTeX t)
             (setq LaTeX-math-abbrev-prefix '";")  ;Set the math mode prefix to
             (setq TeX-electric-escape nil)
+            (add-to-list 'cdlatex-math-modify-alist
+                         '(98 "\\boldsymbol" "\\textbf" t nil nil))
+            (add-to-list 'cdlatex-math-modify-alist
+                         '(115 "\\mathbb" nil t nil nil))
+            (setq cdlatex-math-symbol-prefix 168)
+            (cdlatex-reset-mode)
 ))
 
 
