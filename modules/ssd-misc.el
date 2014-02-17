@@ -1,5 +1,5 @@
 ;; Misc Configuration
-(setq default-directory "~/Dropbox/computing/current/")
+(setq default-directory "~/Dropbox/")
 
 ;; (setq gist-use-curl t)
 
@@ -21,8 +21,6 @@
 
 (setq kill-ring-max 200)
 
-(setq user-full-name "Hera Y He")
-(setq user-mail-address "hera.yu.he@gmail.com")
 
 
 ;; Abbrev

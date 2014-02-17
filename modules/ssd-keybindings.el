@@ -1,7 +1,14 @@
 ;; Keybinding
 ;;set command key to be meta and set option key to be Ctrl
 (when (eq system-type 'darwin)
-  (setq mac-command-modifier 'meta mac-option-modifier 'ctrl))
+  (when (string= user-login-name "hera")
+    (setq mac-command-modifier 'meta mac-option-modifier 'ctrl))
+  (when (string= user-login-name "qyzhao")
+    (setq mac-command-modifier 'ctrl mac-option-modifier 'meta)))
+
+
+
+
 (global-set-key (kbd "C-z") 'undo)
 
 ;; Set yasnippet expansion key to C-o
