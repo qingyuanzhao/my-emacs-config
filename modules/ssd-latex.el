@@ -16,7 +16,7 @@
       ;; option -b highlights the current line; option -g opens Skim in the background
       (setq TeX-view-program-list
             '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n %o %b")))
-))
+      ))
 
 (add-hook 'LaTeX-mode-hook
           (lambda ()
@@ -32,9 +32,9 @@
             (add-to-list 'TeX-command-list '("XeLaTeX" "xelatex -shell-escape %(mode) %t" TeX-run-TeX nil  (latex-mode) ))
             (add-to-list 'TeX-command-list '("pdfLaTeX" "pdflatex -shell-escape %(mode) %t" TeX-run-TeX nil  (latex-mode) ))
             (add-to-list 'TeX-command-list '("latexmk" "latexmk -pdf %s" TeX-run-TeX nil t
-      :help "Run latexmk on file"))
+                                             :help "Run latexmk on file"))
             (add-to-list 'TeX-command-list '("latexmkpvc" "latexmk -pvc -pdf %s" TeX-run-TeX nil t
-      :help "Run latexmk on file"))
+                                             :help "Run latexmk on file"))
             (setq TeX-command-default "latexmkpvc")
             (setq TeX-auto-untabify t     ; remove all tabs before saving
                   TeX-show-compilation t) ; display compilation windows
@@ -53,9 +53,13 @@
             (add-to-list 'cdlatex-math-modify-alist
                          '(115 "\\mathbb" nil t nil nil))
             (setq cdlatex-math-symbol-prefix 168)
+            (setq cdlatex-math-symbol-alist
+                  '((?< ("\\leq" "\\leftarrow" "\\min" ))
+                    (?> ("\\geq" "\\rightarrow" "\\max"))
+                    ))
             (cdlatex-reset-mode)
             (setq cdlatex-paired-parens "$")
-))
+            ))
 
 
 ;; load Reftex
@@ -116,7 +120,7 @@
 
 (setq TeX-macro-global '("/usr/local/texlive/2013/texmf-dist/tex/"))
 (setq TeX-macro-private '("/Users/hera/.emacs.d/elpa/auctex-11.87.2/latex/"
-			 "~/Users/hera/.emacs.d/auctex/"))
+                          "~/Users/hera/.emacs.d/auctex/"))
 (setq TeX-auto-private '("/Users/hera/.emacs.d/auctex/auto"))
 
 ;; cdlatex
