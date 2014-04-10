@@ -1,6 +1,8 @@
 ;; Misc Configuration
 (setq default-directory "~/Dropbox/")
 
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 ;; (setq gist-use-curl t)
 
 
