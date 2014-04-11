@@ -12,6 +12,12 @@
   python-shell-completion-string-code
     "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
+(add-hook 'python-mode-hook
+      (lambda ()
+        (setq indent-tabs-mode t)
+        (setq tab-width 4)
+        (setq python-indent 4)))
+
 ;; octave
 ;; autolad octave mode for *.m-files
 (autoload 'octave-mode "octave-mod" nil t)
