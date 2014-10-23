@@ -1,7 +1,7 @@
 ;; org-mode settings
 (require 'org-install)
 (setq org-completion-use-ido t)
-(require 'org-special-blocks)
+;;(require 'org-special-blocks)
 
 
 

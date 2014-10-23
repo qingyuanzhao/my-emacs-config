@@ -1,6 +1,6 @@
 ;; Basic latex settings
 (require 'tex-site) ;Activate AUCTeX
-(load "auctex-pkg.el" nil t t)
+(load "auctex.el" nil t t)
 (load "preview.el" nil t t)
 
 
