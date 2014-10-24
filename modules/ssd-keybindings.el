@@ -3,6 +3,8 @@
 (when (eq system-type 'darwin)
   (when (string= user-login-name "hera")
     (setq mac-command-modifier 'meta mac-option-modifier 'ctrl))
+  (when (string= user-login-name "yhe1")
+    (setq mac-command-modifier 'meta mac-option-modifier 'ctrl))
   (when (string= user-login-name "qyzhao")
     (setq mac-command-modifier 'ctrl mac-option-modifier 'meta)))
 
