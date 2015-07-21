@@ -4,7 +4,6 @@
 ;; for Emacs Starter kit, which can be found at
 ;; https://github.com/technomancy/emacs-starter-kit
 
-
 (when (>= emacs-major-version 24)
   (require 'package)
   (setq package-archives '(("marmalade" . "http://marmalade-repo.org/packages/")
@@ -45,9 +44,9 @@
 
 
 ;; Default font
-(set-default-font "monaco-16")
+;;(set-default-font "Terminus-9")
 
-
+(load "~/.emacs.d/ox-twbs.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -64,6 +63,10 @@
  ;; If there is more than one, they won't work right.
  '(font-lock-warning-face ((((class color) (background light)) (:foreground "darkgreen")))))
 
+(setq magit-last-seen-setup-instructions "1.4.0")
+
+(global-set-key (kbd "C-+") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
 
 (setq server-use-tcp t)
 (server-start)
