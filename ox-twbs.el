@@ -167,7 +167,7 @@ $(function() {
 
         $(document.body).scrollspy({target: '.sidebar-nav'});
 
-        $('.sidebar-nav').affix();
+        $('.sidebar-nav').affix({offset: { top: 60 } });
     }, 500);
 });
 </script>"
@@ -203,6 +203,8 @@ footer p {
     margin: 0 0 5px;
     text-align: center;
 }
+
+.underline { text-decoration: underline; }
 
 #table-of-contents {
     margin-top: 20px;
@@ -1465,30 +1467,34 @@ holding export options."
                (or link-home link-up))))
    ;; Preamble.
    (org-twbs--build-pre/postamble 'preamble info)
+  ;; Document contents.
+   (format "<%s id=\"%s\" class=\"%s\">\n"
+           (nth 1 (assq 'content org-twbs-divs))
+           (nth 2 (assq 'content org-twbs-divs))
+           (nth 3 (assq 'content org-twbs-divs)))
+   ;; Document title.
+   "<div class=\"col-md-3\">"
+   "</div>"
+   "<div class=\"col-md-9\">"
+   (let ((title (plist-get info :title)))
+     (format "<h1 class=\"page-header\">%s</h1>\n" (org-export-data (or title "") info)))
+   "</div>"
    ;; Table of contents.
+   "<div class=\"row\">"
    (let ((depth (plist-get info :with-toc)))
      (when depth
        (concat
         "<div class=\"col-md-3\">"
         (org-twbs-toc depth info)
         "</div>")))
-   ;; Document contents.
-   (format "<%s id=\"%s\" class=\"%s\">\n"
-           (nth 1 (assq 'content org-twbs-divs))
-           (nth 2 (assq 'content org-twbs-divs))
-           (nth 3 (assq 'content org-twbs-divs)))
    ;; Main doc body twbs row
-   "<div class=\"row\">"
    (if (plist-get info :with-toc) "<div class=\"col-md-9\">"
      "<div class=\"col-md-12\">")
+   contents
+   "</div>"
    "</div>"
    (format "</%s>\n"
            (nth 1 (assq 'content org-twbs-divs)))
-   ;; Document title.
-   (let ((title (plist-get info :title)))
-     (format "<h1 class=\"title\">%s</h1>\n" (org-export-data (or title "") info)))
-   contents
-   "</div>"
    ;; Postamble.
    (org-twbs--build-pre/postamble 'postamble info)
    ;; Closing document.
