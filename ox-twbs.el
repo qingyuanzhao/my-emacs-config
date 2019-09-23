@@ -64,7 +64,7 @@
     (dynamic-block . org-twbs-dynamic-block)
     (entity . org-twbs-entity)
     (example-block . org-twbs-example-block)
-    (export-block . org-twbs-export-block)
+;    (export-block . org-twbs-export-block)
     (export-snippet . org-twbs-export-snippet)
     (fixed-width . org-twbs-fixed-width)
     (footnote-definition . org-twbs-footnote-definition)
@@ -105,7 +105,7 @@
     (underline . org-twbs-underline)
     (verbatim . org-twbs-verbatim)
     (verse-block . org-twbs-verse-block))
-  :export-block "HTML"
+;  :export-block "HTML"
   :filters-alist '((:filter-final-output . org-twbs-final-function))
   :menu-entry
   '(?w "Export to TWBS HTML"

@@ -1,5 +1,5 @@
 ;; Misc Configuration
-(setq default-directory "~/Dropbox/")
+(setq default-directory "~/Dropbox (Personal)/Stats/Work/")
 
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))

@@ -17,6 +17,13 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
+;; Fix for the warnings for ido-cur etc.
+
+(defvar ido-cur-item nil)
+(defvar ido-default-item nil)
+(defvar ido-cur-list nil)
+(defvar predicate nil)
+(defvar inherit-input-method nil)
 
 (defvar my-packages '(ido-ubiquitous ess flymake flymake-ruby flymake-shell
                       org-magit auctex magit python yasnippet color-theme

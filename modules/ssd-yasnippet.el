@@ -1,5 +1,5 @@
 (require 'yasnippet)
-(yas--initialize)
+;(yas--initialize)
 (yas/load-directory (concat emacs-dir "snippets"))
 (setq yas/triggers-in-field t)
 

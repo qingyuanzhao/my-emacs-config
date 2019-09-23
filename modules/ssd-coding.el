@@ -54,11 +54,10 @@
              (local-set-key (kbd "C-c d") 'ess-rdired)))
 
 
-;; Matlab-mode
-(load-library "matlab-load")
-(setq matlab-shell-command "/Applications/MATLAB_R2013a_Student.app/bin/matlab")
-(setq matlab-shell-command-switches '("-nodesktop -nosplash"))
-
+;; ;; Matlab-mode
+;; (load-library "matlab-load")
+;; (setq matlab-shell-command "/Applications/MATLAB_R2013a_Student.app/bin/matlab")
+;; (setq matlab-shell-command-switches '("-nodesktop -nosplash"))
 
 
 (autoload 'matlab-mode "matlab" "Enter Matlab mode." t)
