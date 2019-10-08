@@ -5,3 +5,5 @@ You need to install TeX Live to allow for LaTeX compilation: brew cask install m
 After installation, mv .latexmkrc to ~/ to allow latexmk to continue compilation even if it encounters error.
 
 Install Skim (pdf viewer) which allows SyncTex to jump from pdf to latex source (and vice versa). After installation, in Preferences --> Sync, click "Check for file changes" and "Reload automatically". Choose "Custom" Preset and put Command = /usr/local/bin/emacsclient and Arguments = --no-wait +%line "%file".
+
+Install aspell: brew install aspell
